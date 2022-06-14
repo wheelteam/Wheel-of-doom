@@ -6,12 +6,14 @@ function addUsersToList(user){
     user = capitalizeUser(user);
     const userList = document.getElementById("users");
     userList.innerHTML += addUserModule(user);
+    let button = document.getElementById(`remove${user}`);
+    button.onclick = () => removeUser(user);
 }
 
 function addUserModule(user){
     const module = `<li>
                         <input type='text' placeholder='${user}'>
-                        <button id='removeUserButton' type='submit'>x</button>
+                        <button id='remove${user}' type='submit'>x</button>
                     </li>`;
     return module;
 }
@@ -25,4 +27,8 @@ function capitalizeUser(user) {
     const capitalizedUser = user.replace(firstLetter, upperCase);
 
     return capitalizedUser;
+}
+
+function removeUser(user) {
+    alert('usuario eliminado' + user);
 }
