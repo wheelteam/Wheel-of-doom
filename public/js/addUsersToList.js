@@ -19,8 +19,10 @@ function addUserModule(user){
 function capitalizeUser(user) {
     user = user.toLowerCase();
     const firstLetter = user[0];
+    console.log(firstLetter);
     const upperCase = firstLetter.toUpperCase();
-    user.replace(firstLetter, upperCase);
+    console.log(upperCase);
+    const capitalizedUser = user.replace(firstLetter, upperCase);
 
-    return user;
+    return capitalizedUser;
 }
