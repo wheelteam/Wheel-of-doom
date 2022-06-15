@@ -1,8 +1,8 @@
-addUsersToList('SUSANA');
-addUsersToList('SILVIA');
-addUsersToList('sergio');
+addUserToList('SUSANA');
+addUserToList('SILVIA');
+addUserToList('sergio');
 
-function addUsersToList(user){
+function addUserToList(user) {
     user = capitalizeUser(user);
     const userList = document.getElementById("users");
     userList.innerHTML += addUserModule(user);
@@ -10,11 +10,13 @@ function addUsersToList(user){
     button.onclick = () => removeUser(user);
 }
 
-function addUserModule(user){
-    const module = `<li>
-                        <input type='text' placeholder='${user}'>
-                        <button id='remove${user}' type='submit'>x</button>
-                    </li>`;
+function addUserModule(user) {
+    const module = 
+    `<li>
+        <input type='text' placeholder='${user}'>
+        <button id='remove${user}' type='submit'>x</button>
+    </li>`;
+
     return module;
 }
 
@@ -32,3 +34,4 @@ function capitalizeUser(user) {
 function removeUser(user) {
     alert('usuario eliminado' + user);
 }
+
