@@ -10,6 +10,7 @@ function addUserToList(user) {
 
 function addUserModule(user) {
     const userListLiElement = document.createElement('li');
+    userListLiElement.id = `user${user}`;
 
     const userInput = document.createElement('input');
     userInput.type = 'text';
