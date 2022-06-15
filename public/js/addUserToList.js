@@ -1,23 +1,32 @@
-addUserToList('SUSANA');
+addUserToList('MIguel');
 addUserToList('SILVIA');
 addUserToList('sergio');
 
 function addUserToList(user) {
     user = capitalizeUser(user);
     const userList = document.getElementById("users");
-    userList.innerHTML += addUserModule(user);
-    let button = document.getElementById(`remove${user}`);
-    button.onclick = () => removeUser(user);
+    addUserModule(user);   
 }
 
 function addUserModule(user) {
-    const module = 
-    `<li>
-        <input type='text' placeholder='${user}'>
-        <button id='remove${user}' type='submit'>x</button>
-    </li>`;
+    const userListLiElement = document.createElement('li');
 
-    return module;
+    const userInput = document.createElement('input');
+    userInput.type = 'text';
+    userInput.placeholder = user;
+    userInput.className = 'user-module-input';
+    
+    const removeUserButton = document.createElement('button');
+    removeUserButton.type = 'button';
+    removeUserButton.id = `remove${user}`;
+    removeUserButton.innerHTML = 'x';
+    removeUserButton.className = 'remove-user-button';
+    removeUserButton.onclick = () => removeUserfromUserList(user);
+
+    const userModulesList = document.getElementById('users-modules-list');
+    userModulesList.appendChild(userListLiElement);
+    userListLiElement.appendChild(userInput);
+    userListLiElement.appendChild(removeUserButton);
 }
 
 function capitalizeUser(user) {
@@ -30,8 +39,3 @@ function capitalizeUser(user) {
 
     return capitalizedUser;
 }
-
-function removeUser(user) {
-    alert('usuario eliminado' + user);
-}
-
