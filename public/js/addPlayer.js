@@ -10,3 +10,6 @@ btn.addEventListener('click', function handleClick(event) {
   firstNameInput.value = '';
 });
 
+
+
+
