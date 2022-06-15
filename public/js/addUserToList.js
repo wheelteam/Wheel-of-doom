@@ -1,3 +1,5 @@
+import { removeUser } from "./removeUser.js";
+
 addUserToList('MIguel');
 addUserToList('SILVIA');
 addUserToList('sergio');
@@ -22,7 +24,7 @@ function addUserModule(user) {
     removeUserButton.id = `remove${user}`;
     removeUserButton.innerHTML = 'x';
     removeUserButton.className = 'remove-user-button';
-    removeUserButton.onclick = () => removeUserfromUserList(user);
+    removeUserButton.onclick = () => removeUser(user);
 
     const userModulesList = document.getElementById('users-modules-list');
     userModulesList.appendChild(userListLiElement);
