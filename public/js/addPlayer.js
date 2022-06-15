@@ -6,8 +6,9 @@ btn.addEventListener('click', function handleClick(event) {
 
   const firstNameInput = document.getElementById('writeNewPlayer');
   let name = firstNameInput.value;
-  addUserToList(name);
+  //addUserToList(name);
   firstNameInput.value = '';
+  console.log(firstNameInput);
 });
 
 
