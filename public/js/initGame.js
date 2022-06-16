@@ -4,29 +4,34 @@ const resetBtn = document.getElementById("reset");
 
 startBtn.addEventListener('click', function handleClick(event) {
     event.preventDefault();
-
-    console.log("Has hecho en Jugar");
-
+    console.log("Has hecho click en Jugar");
+    window.alert("Has hecho click en Boton Start");
+    console.log(generateRandomWinner(7) + "//" + "Este judador a salido Elegido")
     //randomWinnerParticipant();
+    generateName();
+    generateRandomWinner()
+   // console.log(newNumbers);
+  // window.alert(combination);
 });
 
 resetBtn.addEventListener('click', function handleClick(event) {
     event.preventDefault();
 
-    console.log("Has hecho click en Reset");
-
+    console.log("Has hecho en click en RESET");
+    //window.alert("Has hecho click en Boton Reset");
+   
     //randomWinnerParticipant();
+
 });
 
+function generateRandomWinner(max){
 
+   return  Math.floor(Math.random() * max)
+   // expected output: from 0 to 6
 
-function randomWinnerParticipantNumber(){
-    //Numero aleatorio entre los valores 0 a 6
-  let randomNum = Math.floor(random()* 7);
-
-  //Muestreo del Numero aleatorio asignado
-  console.log(randomNum);
 }
+
+
 
 /*
 function randomWinnerParticipant(){
