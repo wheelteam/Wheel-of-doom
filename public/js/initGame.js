@@ -1,4 +1,28 @@
+import { removeUserFromArray, removeUserFromPlayground } from "./removeUser.js";
 
+function initGame() {
+    const length = currentPlayers.length;
+    const winnerPosition = generateRandomWinner(length);
+    const winner = currentPlayers[winnerPosition];
+    const winnerBox = document.getElementById(`player${winner}`);
+    winnerBox.classList.add('winner');
+    setTimeout(9000);
+
+    alert(`${winner} ha sido eliminado.`)
+
+    removeUserFromArray(winner);
+    removeUserFromPlayground(winner);
+
+}
+
+
+
+function generateRandomWinner(max){
+
+    return  Math.floor(Math.random() * max)
+    // expected output: from 0 to 6
+ 
+ }
 const startBtn = document.getElementById("start");
 const resetBtn = document.getElementById("reset");
 
@@ -15,20 +39,10 @@ startBtn.addEventListener('click', function handleClick(event) {
 
 resetBtn.addEventListener('click', function handleClick(event) {
     event.preventDefault();
-
-    console.log("Has hecho en click en RESET");
-    //window.alert("Has hecho click en Boton Reset");
-   
-    //randomWinnerParticipant();
-
+    location.reload('../index.html')
 });
 
-function generateRandomWinner(max){
 
-   return  Math.floor(Math.random() * max)
-   // expected output: from 0 to 6
-
-}
 
 
 

@@ -26,4 +26,4 @@ function removeUserFromPlayground(user) {
 
 
 
-export {removeUser};
+export {removeUser, removeUserFromArray, removeUserFromPlayground};
