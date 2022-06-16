@@ -1,0 +1,13 @@
+#writeNewPlayer{
+    border-radius: 80px 80px 80px 80px;
+    width: 180px;
+    height: 20px;
+}
+
+#addPlayer{
+    width: 22px;
+    height: 22px;
+    border-radius: 80px 80px 80px 80px;
+    font-size: 16px;
+}
+
