@@ -1,3 +1,22 @@
-#user-list{
+#user-list {
     border-radius: 80px 80px 80px 80px;
+}
+
+#users-modules-list>li {
+    list-style: none;
+    margin: 5px 0;
+}
+
+.user-module-input {
+    border-radius: 80px 80px 80px 80px;
+    height: 20px;
+    margin-right: 5px;
+    padding: 2px 5px;
+}
+
+.remove-user-button {
+    width: 22px;
+    height: 22px;
+    border-radius: 80px 80px 80px 80px;
+    font-size: 16px;
 }

@@ -1,13 +1,22 @@
-#writeNewPlayer{
+#writeNewPlayer {
+    margin: 10px 0;
     border-radius: 80px 80px 80px 80px;
     width: 180px;
     height: 20px;
+    padding: 2px 5px;
 }
 
-#addPlayer{
+#addPlayer {
     width: 22px;
     height: 22px;
     border-radius: 80px 80px 80px 80px;
     font-size: 16px;
 }
 
+#players-label {
+    margin: 10px 0;
+}
+
+#userInput {
+    margin: 10px 0;
+}
