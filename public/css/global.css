@@ -2,3 +2,24 @@
 @import './main-components/playground/playground.css';
 @import './main-components/userInput/userInput.css';
 @import './main-components/userList/userList.css';
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e9ffc9;
+    margin: 25px 20px;
+}
+
+h1{
+    font-family: "JetBrains, Mono", monospace;
+    font-size: 34px;
+    color: #A0A983;
+    -webkit-text-stroke: 1px black;
+
+}
