@@ -19,7 +19,7 @@ function addUserModule(user) {
     userInput.placeholder = user;
     userInput.className = 'user-module-input';
     
-    const removeUserButton = document.createElement('button');
+    let removeUserButton = document.createElement('button');
     removeUserButton.type = 'button';
     removeUserButton.id = `remove${user}`;
     removeUserButton.innerHTML = 'x';
