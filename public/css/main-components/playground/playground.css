@@ -1,0 +1,17 @@
+#reset{
+    font-family: monospace;
+    background-color: #5A9AD4;
+    width: 70px;
+    height: 30px;
+    border-radius: 80px 80px 80px 80px;
+    margin-top: 70px;
+}
+
+#start{
+    font-family: monospace;
+    background-color: #FF001F;
+    width: 70px;
+    height: 30px;
+    border-radius: 80px 80px 80px 80px;
+    margin-top: 70px;
+}
