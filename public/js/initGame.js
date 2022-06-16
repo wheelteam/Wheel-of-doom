@@ -4,12 +4,11 @@ const resetBtn = document.getElementById("reset");
 
 startBtn.addEventListener('click', function handleClick(event) {
     event.preventDefault();
-    console.log("Has hecho click en Jugar");
-    window.alert("Has hecho click en Boton Start");
-    console.log(generateRandomWinner(7) + "//" + "Este judador a salido Elegido")
+    //console.log("Has hecho click en Jugar");
+    //console.log(generateRandomWinner(7) + "//" + "Este judador a salido Elegido")
     //randomWinnerParticipant();
-    generateName();
-    generateRandomWinner()
+    let people = ["Pepe","Juan","Pedro","Luis","Ana","Cristina"];
+    console.log("El ganador es: " + people[generateRandomWinner(6)] );
    // console.log(newNumbers);
   // window.alert(combination);
 });
