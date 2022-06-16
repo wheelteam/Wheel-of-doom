@@ -5,10 +5,28 @@ const resetBtn = document.getElementById("reset");
 startBtn.addEventListener('click', function handleClick(event) {
     event.preventDefault();
 
-    console.log("Has hecho en Jugar")
+    console.log("Has hecho en Jugar");
 
     //randomWinnerParticipant();
 });
+
+resetBtn.addEventListener('click', function handleClick(event) {
+    event.preventDefault();
+
+    console.log("Has hecho click en Reset");
+
+    //randomWinnerParticipant();
+});
+
+
+
+function randomWinnerParticipantNumber(){
+    //Numero aleatorio entre los valores 0 a 6
+  let randomNum = Math.floor(random()* 7);
+
+  //Muestreo del Numero aleatorio asignado
+  console.log(randomNum);
+}
 
 /*
 function randomWinnerParticipant(){
