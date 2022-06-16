@@ -1,6 +1,6 @@
 function removeUser(user) {
   removeUserfromUserList(user);
-  //removeUserfromPlayground(user);
+  removeUserfromPlayground(user);
 }
 
 function removeUserfromUserList(user) {
@@ -9,7 +9,8 @@ function removeUserfromUserList(user) {
 }
 
 function removeUserfromPlayground(user) {
-  //TO-DO
+  const player = document.getElementById(`player${user}`);
+  player.remove();
 }
 
 export {removeUser};
