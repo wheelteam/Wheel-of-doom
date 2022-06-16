@@ -16,10 +16,3 @@ body{
     margin: 25px 20px;
 }
 
-h1{
-    font-family: "JetBrains, Mono", monospace;
-    font-size: 34px;
-    color: #A0A983;
-    -webkit-text-stroke: 1px black;
-
-}
