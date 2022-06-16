@@ -1,14 +1,14 @@
-import {currentPlayers} from "./addUserToList.js"
+
 
 function removeUser(user) {
   removeUserFromUserList(user);
-  // removeUserFromPlayground(user);
+  removeUserFromPlayground(user);
   removeUserFromArray(user);
-  console.log(currentPlayers);
+  
 }
 
 function removeUserFromArray(user){
-  let currentPlayers = currentPlayers.filter(currentUser => {
+   currentPlayers = currentPlayers.filter(currentUser => {
     return currentUser !== user;
   });
 }

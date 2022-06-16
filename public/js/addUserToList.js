@@ -1,5 +1,5 @@
 import { removeUser } from "./removeUser.js";
-let currentPlayers = ["Miguel", "Silvia", "Sergio"];
+
 addUserToList('MIguel');
 addUserToList('SILVIA');
 addUserToList('sergio');
@@ -42,4 +42,3 @@ function capitalizeUser(user) {
 
     return capitalizedUser;
 }
-export {currentPlayers};
