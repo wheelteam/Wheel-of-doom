@@ -1,5 +1,5 @@
 import { removeUser } from "./removeUser.js";
-
+let currentPlayers = ["Miguel", "Silvia", "Sergio"];
 addUserToList('MIguel');
 addUserToList('SILVIA');
 addUserToList('sergio');
@@ -19,7 +19,7 @@ function addUserModule(user) {
     userInput.placeholder = user;
     userInput.className = 'user-module-input';
     
-    const removeUserButton = document.createElement('button');
+    let removeUserButton = document.createElement('button');
     removeUserButton.type = 'button';
     removeUserButton.id = `remove${user}`;
     removeUserButton.innerHTML = 'x';
@@ -42,3 +42,4 @@ function capitalizeUser(user) {
 
     return capitalizedUser;
 }
+export {currentPlayers};
