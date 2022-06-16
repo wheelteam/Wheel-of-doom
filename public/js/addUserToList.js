@@ -1,12 +1,7 @@
 import { removeUser } from "./removeUser.js";
 
-addUserToList('MIguel');
-addUserToList('SILVIA');
-addUserToList('sergio');
 
 function addUserToList(user) {
-    user = capitalizeUser(user);
-    const userList = document.getElementById("users");
     addUserModule(user);   
 }
 
@@ -32,13 +27,4 @@ function addUserModule(user) {
     userListLiElement.appendChild(removeUserButton);
 }
 
-function capitalizeUser(user) {
-    user = user.toLowerCase();
-    const firstLetter = user[0];
-    console.log(firstLetter);
-    const upperCase = firstLetter.toUpperCase();
-    console.log(upperCase);
-    const capitalizedUser = user.replace(firstLetter, upperCase);
-
-    return capitalizedUser;
-}
+export {addUserToList};

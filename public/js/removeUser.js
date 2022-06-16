@@ -1,4 +1,4 @@
-
+import { currentPlayers } from "./app.js";
 
 function removeUser(user) {
   removeUserFromUserList(user);
@@ -8,7 +8,7 @@ function removeUser(user) {
 }
 
 function removeUserFromArray(user){
-   currentPlayers = currentPlayers.filter(currentUser => {
+    currentPlayers = currentPlayers.filter(currentUser => {
     return currentUser !== user;
   });
 }

@@ -1,49 +1,46 @@
-const btn = document.getElementById('addPlayer');
+import { addUserToList } from "./addUserToList.js";
+import { currentPlayers } from "./app.js";
 
- let currentPlayers = []
- 
-
-btn.addEventListener('click', function handleClick(event) {
+function addPlayer() {
   setTimeout(9000);
-  event.preventDefault();
 
+  const firstInput = document.getElementById('writeNewPlayer');
+  const username = capitalizeUser(firstInput.value);
+  if (currentPlayers.length < 6){
+    
+    if (!(currentPlayers.includes(username))){
+      currentPlayers.push(username)
+      const playerBox = document.createElement('div');
+      playerBox.id = `player${username}`;
+      playerBox.className = 'player-box';
+      playerBox.innerHTML = username;
 
-  const firstNameInput = document.getElementById('writeNewPlayer').value;
-
-  while(currentPlayers.length < 7){
-    let why =!(currentPlayers.includes(firstNameInput));
-    //console.log(why);
-    if (!(currentPlayers.includes(firstNameInput))){
-    currentPlayers.push(firstNameInput)
-    const playerBox = document.createElement('div');
-    playerBox.id = `player${firstNameInput}`;
-    playerBox.className = 'player-box';
-    playerBox.innerHTML = firstNameInput;
-
-    const playground = document.getElementById('playground-field');
-    playground.appendChild(playerBox);
+      const playground = document.getElementById('playground-field');
+      playground.appendChild(playerBox);
+      addUserToList(username);
+    } else {
+      window.alert('nombre repetido,introduzca otro nombre plis')
     }
-    else {window.alert('nombre repetido,introduzca otro nombre plis')};
-
+    firstInput.value = '';
     //Desabilitar boton o input 
-    if(currentPlayers.length ===6){
-      document.getElementById('addPlayer').disabled = true;
-      window.alert("Has metido el Num Maximo de participantes");
-    }
-
-    break;
-  
+  } else {
+    document.getElementById('addPlayer').disabled = true;
+    window.alert("Has metido el Num Maximo de participantes");
   }
+};
 
-    //Array para crear juadores en el campo de juego
-    //Eliminar jugador mediante el numero random 
+function capitalizeUser(user) {
+  user = user.toLowerCase();
+  const firstLetter = user[0];
+  console.log(firstLetter);
+  const upperCase = firstLetter.toUpperCase();
+  console.log(upperCase);
+  const capitalizedUser = user.replace(firstLetter, upperCase);
 
-  //addUserToList(firstNameInput);
-  //console.log(firstNameInput);
-  
-  firstNameInput.value = '';
- // console.log(currentPlayers);
-});
+  return capitalizedUser;
+}
+
+export {addPlayer};
 
 
 
