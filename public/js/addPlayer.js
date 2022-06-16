@@ -17,9 +17,10 @@ btn.addEventListener('click', function handleClick(event) {
     currentPlayers.push(firstNameInput)
     const playerBox = document.createElement('div');
     playerBox.id = `player${firstNameInput}`;
+    playerBox.className = 'player-box';
     playerBox.innerHTML = firstNameInput;
 
-    const playground = document.getElementById('playground');
+    const playground = document.getElementById('playground-field');
     playground.appendChild(playerBox);
     }
     else {window.alert('nombre repetido,introduzca otro nombre plis')};

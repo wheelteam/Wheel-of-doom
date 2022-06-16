@@ -1,4 +1,4 @@
-#reset{
+#reset {
     font-family: monospace;
     background-color: #5A9AD4;
     width: 70px;
@@ -7,11 +7,39 @@
     margin-top: 70px;
 }
 
-#start{
+#start {
     font-family: monospace;
     background-color: #FF001F;
     width: 70px;
     height: 30px;
     border-radius: 80px 80px 80px 80px;
     margin-top: 70px;
+}
+
+#playground {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#playground-buttons {
+    margin: auto;
+}
+
+#playground-field {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.player-box {
+    margin: 4px 0;
+    padding: 2px;
+    width: 25vw;
+    height: 20px;
+    border: 2px solid black;
+}
+
+.winner {
+    background-color: #BD3D3D;
 }
